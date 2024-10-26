@@ -11,8 +11,8 @@
 1. **Clone the Repository**
    Open your terminal and navigate to the directory where you want to clone the repository. Run the following command:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/fredrick2002/ruleengine-server
+   cd ruleengine-server
    ```
 
 2. **Verify Port Availability**
