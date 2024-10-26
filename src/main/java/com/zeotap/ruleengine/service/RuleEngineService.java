@@ -76,6 +76,7 @@ public class RuleEngineService {
             combinedAst = (combinedAst == null) ? astNode : combineAstService.combineAndOptimizeAst(combinedAst, astNode);
         }
         System.out.println("Combined AST: " + combinedAst);
+        nodeRepository.saveNode((int)3, combinedAst);
         return combinedAst;
     }
 

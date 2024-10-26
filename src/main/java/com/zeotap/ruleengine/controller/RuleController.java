@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zeotap.ruleengine.model.DTO.RuleIdsRequest;
 import com.zeotap.ruleengine.model.Node;
+import com.zeotap.ruleengine.repository.NodeRepository;
 import com.zeotap.ruleengine.service.CombineAstService;
 import com.zeotap.ruleengine.service.RuleEngineService;
 
@@ -67,7 +68,7 @@ public class RuleController {
     public ResponseEntity<Node> combineRules(@RequestBody RuleIdsRequest ruleIdsRequest) {
         List<Integer> ruleIds = ruleIdsRequest.getRuleIds();
         Node combinedAst = ruleEngineService.combineAndOptimizeRules(ruleIds);
-        System.out.println("Final Combined AST: " + combinedAst); // Debug output
+        System.out.println("Final Combined AST: " + combinedAst);
         return ResponseEntity.ok(combinedAst);
     }
 
